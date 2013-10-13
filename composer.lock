@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d63362b14190023d8092a36f8567c79c",
+    "hash": "12f357b4a52f468a7fdc42d69f6bfc89",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -603,6 +603,29 @@
                 "orm"
             ],
             "time": "2013-05-11 07:51:12"
+        },
+        {
+            "name": "frameworks/jquery",
+            "version": "1.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frameworks/jquery.git",
+                "reference": "d6515f72038304d7715e2d33b41cd1188dbbedb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frameworks/jquery/zipball/d6515f72038304d7715e2d33b41cd1188dbbedb8",
+                "reference": "d6515f72038304d7715e2d33b41cd1188dbbedb8",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2013-07-10 19:38:37"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -1498,6 +1521,66 @@
             "time": "2013-05-19 11:09:35"
         },
         {
+            "name": "presta/composer-public-bundle",
+            "version": "dev-master",
+            "target-dir": "Presta/ComposerPublicBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prestaconcept/PrestaComposerPublicBundle.git",
+                "reference": "0797c85640557a7749ebb98212bc03903b142e57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/prestaconcept/PrestaComposerPublicBundle/zipball/0797c85640557a7749ebb98212bc03903b142e57",
+                "reference": "0797c85640557a7749ebb98212bc03903b142e57",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/symfony": ">=2.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.22"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Presta\\ComposerPublicBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Epely",
+                    "email": "depely@prestaconcept.net",
+                    "role": "Initial developer"
+                },
+                {
+                    "name": "Nicolas Joubert",
+                    "email": "njoubert@prestaconcept.net",
+                    "role": "Maintainer, Developer"
+                }
+            ],
+            "description": "A symfony 2 bundle that provides a simple way to include public 3rd-party libraries (javascripts, css, pictures ...) into your projects and keep its up-to-date.",
+            "keywords": [
+                "3rd party",
+                "Symfony2",
+                "bundle",
+                "css",
+                "javascript",
+                "prestaconcept",
+                "public"
+            ],
+            "time": "2013-10-07 07:18:34"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -2250,7 +2333,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mopa/bootstrap-bundle": 20,
-        "friendsofsymfony/rest-bundle": 20
+        "friendsofsymfony/rest-bundle": 20,
+        "presta/composer-public-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

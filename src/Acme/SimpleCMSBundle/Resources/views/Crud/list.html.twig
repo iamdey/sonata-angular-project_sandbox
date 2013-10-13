@@ -1,0 +1,11 @@
+{% extends "AcmeSimpleCMSBundle::base.html.twig" %}
+
+{% block content %}
+
+    <div class="row-fluid">
+        {% for post in posts %}
+            <div class="span12"><h3>{{ post.title }}</h3></div>
+            <div class="span12">{{ post.content }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}

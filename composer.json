@@ -24,7 +24,9 @@
         "leafo/lessphp": "v0.4.0",
         "friendsofsymfony/jsrouting-bundle": "~1.3",
         "friendsofsymfony/rest-bundle": "~1.0@dev",
-        "jms/serializer-bundle": "*"
+        "jms/serializer-bundle": "*",
+        "frameworks/jquery": "1.10.2",
+        "presta/composer-public-bundle": "~1.0@dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -33,7 +35,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap",
+            "Presta\\ComposerPublicBundle\\Composer\\ScriptHandler::ComposerPublic"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -41,7 +44,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap"
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap",
+            "Presta\\ComposerPublicBundle\\Composer\\ScriptHandler::ComposerPublic"
         ]
     },
     "config": {

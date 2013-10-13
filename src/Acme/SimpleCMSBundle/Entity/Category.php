@@ -30,7 +30,7 @@ class Category
     private $name;
     
     /**
-     * @ORM\OneToMany(mappedBy="id", targetEntity="Post")
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="category")
      */
     protected $posts;
 
