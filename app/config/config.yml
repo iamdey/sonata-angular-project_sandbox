@@ -75,4 +75,4 @@ swiftmailer:
 presta_composer_public:
     blend:
         frameworks/jquery: ~
-        
+        angular/angular.js: ~

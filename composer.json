@@ -6,6 +6,19 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+        { 
+            "type": "package",
+            "package": { 
+                "name": "angular/angular.js",
+                "version": "1.0.8",
+                "dist": { 
+                    "url": "http://code.angularjs.org/1.0.8/angular-1.0.8.zip",
+                    "type": "zip"
+                } 
+            }
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
@@ -26,7 +39,8 @@
         "friendsofsymfony/rest-bundle": "~1.0@dev",
         "jms/serializer-bundle": "*",
         "frameworks/jquery": "1.10.2",
-        "presta/composer-public-bundle": "~1.0@dev"
+        "presta/composer-public-bundle": "~1.0@dev",
+        "angular/angular.js": "1.0.8"
     },
     "scripts": {
         "post-install-cmd": [

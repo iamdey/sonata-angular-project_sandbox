@@ -1,12 +1,12 @@
 {% extends "::base.html.twig" %}
 
 
-{% block html_tag "<html ng-app>" %}
+{% block html_tag '<html ng-app="SonataAngularApp">' %}
 
 {% block head_script %}
     {{ parent() }}
     {% javascripts
-        'angular-1.0.8/angular.js'
+        'bundles/prestacomposerpublic/angular/angular.js/angular.js'
         'bundles/acmesimplecms/js/ctrl.js'
     %}
         <script type="text/javascript" src="{{ asset_url }}"></script>

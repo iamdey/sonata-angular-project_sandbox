@@ -1,7 +1,13 @@
 acme_simple_cms:
-    resource: "@AcmeSimpleCMSBundle/Controller/"
+    resource: "@AcmeSimpleCMSBundle/Controller/DashboardController.php"
     type:     annotation
     prefix:   /
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+    
+posts:
+    type:     rest
+    resource: "@AcmeSimpleCMSBundle/Controller/PostController.php"
+    prefix:   /
+    

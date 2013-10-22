@@ -1,0 +1,15 @@
+{% extends "AcmeSimpleCMSBundle::base.html.twig" %}
+
+{% block content %}
+{% raw %}
+<div class="row">
+    
+    <div class="col-sm-8" ng-view></div>
+    <div class="col-sm-4 sidebar-nav" ng-controller="MenuCtrl">
+        <ul class="nav nav-list">
+            <li ng-repeat="item in menu" ng-class="navClass(item.navClass)"><a href="{{ item.uri }}">{{ item.name }}</a></li>
+        </ul>
+    </div>
+</div>
+{% endraw %}
+{% endblock %}

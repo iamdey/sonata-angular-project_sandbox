@@ -3,8 +3,19 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "12f357b4a52f468a7fdc42d69f6bfc89",
+    "hash": "3d45a9f6a6cfe531a70700b32d6867a3",
     "packages": [
+        {
+            "name": "angular/angular.js",
+            "version": "1.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://code.angularjs.org/1.0.8/angular-1.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1.2",
@@ -1314,12 +1325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "8b74c8fdfe6c2a4a1ef9f055909de6d53ef9549a"
+                "reference": "4b4ec879de978fe40a792a359f0940362ef503ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/8b74c8fdfe6c2a4a1ef9f055909de6d53ef9549a",
-                "reference": "8b74c8fdfe6c2a4a1ef9f055909de6d53ef9549a",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/4b4ec879de978fe40a792a359f0940362ef503ec",
+                "reference": "4b4ec879de978fe40a792a359f0940362ef503ec",
                 "shasum": ""
             },
             "require": {
@@ -1368,7 +1379,7 @@
                 "form",
                 "template"
             ],
-            "time": "2013-10-03 19:07:12"
+            "time": "2013-10-14 22:38:11"
         },
         {
             "name": "mopa/composer-bridge",
