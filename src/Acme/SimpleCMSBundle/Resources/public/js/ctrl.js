@@ -36,6 +36,28 @@ SonataAngularApp.controller('ShowCtrl', ['$scope', '$routeParams', function ($sc
 
 SonataAngularApp.controller('CreateCtrl', ['$scope', '$routeParams', '$http', '$location', function ($scope, $routeParams, $http, $location) {
     $scope.master= {};
+    
+    $http({
+        method: "GET",
+        url: "/users.json"
+    }).success(function(data) {
+        $scope.users = data;
+    });
+    
+    $http({
+        method: "GET",
+        url: "/categories.json"
+    }).success(function(data) {
+        $scope.categories = data;
+    });
+    
+    $http({
+        method: "GET",
+        url: "/tags.json"
+    }).success(function(data) {
+        $scope.tags = data;
+    });
+
     $scope.update = function(post) {
         $scope.master= angular.copy(post);
         $http({

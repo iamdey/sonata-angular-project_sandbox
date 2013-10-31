@@ -59,21 +59,21 @@ class Post
     
     /**
      * @var User
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="posts", cascade={"merge"})
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
      */
     protected $author;
     
     /**
      * @var Category
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="posts")
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="posts", cascade={"merge"})
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     protected $category;
     
     /**
      * @var \Doctrine\ORM\PersistentCollection
-     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="posts")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="posts", cascade={"merge"})
      * @ORM\JoinTable(name="posts_tags")
      */
     protected $tags;
@@ -244,4 +244,26 @@ class Post
     {
         return $this->tags;
     }
+    
+    public function getAuthor() 
+    {
+        return $this->author;
+    }
+
+    public function getCategory() 
+    {
+        return $this->category;
+    }
+
+    public function setAuthor(User $author) 
+    {
+        $this->author = $author;
+    }
+
+    public function setCategory(Category $category) 
+    {
+        $this->category = $category;
+    }
+
+
 }

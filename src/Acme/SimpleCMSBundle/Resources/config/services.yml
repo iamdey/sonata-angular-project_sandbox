@@ -1,0 +1,8 @@
+parameters:
+    sonata_angular.choice_type.class: 'Acme\SimpleCMSBundle\Form\Type\AngularChoiceTypeExtension'
+    
+services:
+    angular_choice:
+        class: %sonata_angular.choice_type.class%
+        tags: [{name: "form.type_extension", alias: "choice"}]
+        

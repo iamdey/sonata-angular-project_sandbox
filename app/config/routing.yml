@@ -10,4 +10,18 @@ posts:
     type:     rest
     resource: "@AcmeSimpleCMSBundle/Controller/PostController.php"
     prefix:   /
+
+users:
+    type:     rest
+    resource: "@AcmeSimpleCMSBundle/Controller/UserController.php"
+    prefix:   /
+
+categories:
+    type:     rest
+    resource: "@AcmeSimpleCMSBundle/Controller/CategoryController.php"
+    prefix:   /
     
+tags:
+    type:     rest
+    resource: "@AcmeSimpleCMSBundle/Controller/TagController.php"
+    prefix:   /

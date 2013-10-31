@@ -29,15 +29,17 @@ class PostController extends FOSRestController implements ClassResourceInterface
      */
     public function postAction()
     {
-        $data = json_decode($this->getRequest()->getContent(), true);
-        $post = new Post;
-        $post->setCreatedAt(new \DateTime);
-        $post->setUpdatedAt(new \DateTime);
+        $serializer = $this->get('serializer');
+        $data = $serializer->deserialize($this->getRequest()->getContent(), 'Acme\SimpleCMSBundle\Entity\Post', 'json');
+        $post = $this->getDoctrine()->getManager()->merge($data);
         
-        $form = $this->createForm(new PostType(), $post);
-        $form->submit($data, true);
+        $validator = $this->get('validator');
+        $violations = $validator->validate($post);
         
-        if ($form->isValid()) {
+        if ($violations->count() === 0) {
+            $post->setCreatedAt(new \DateTime);
+            $post->setUpdatedAt(new \DateTime);
+            
             $em = $this->getDoctrine()->getEntityManager();
             $em->persist($post);
             $em->flush();
@@ -45,6 +47,6 @@ class PostController extends FOSRestController implements ClassResourceInterface
             return new Response('', 201);
         }
         
-        return new Response(json_encode(array('errors' => $form->getErrorsAsString(), 'post' => $post)), 417);
+        return new Response(json_encode(array('errors' => $violations, 'post' => $post)), 417);
     }
 }

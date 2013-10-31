@@ -17,9 +17,10 @@ class PostType extends AbstractType
     {
         $builder->add('title', 'text', array('attr' => array('ng-model' => "post.title")))
             ->add('content', 'textarea', array('attr' => array('ng-model' => "post.content")))
-//            ->add('author', 'choice', array('attr' => array('ng-model' => "post.author")))
+            ->add('author', 'choice', array('ng-model' => 'post.author', 'ng-options-property' => 'firstname', 'ng-options-model' => 'users'))
             ->add('slug', 'text', array('attr' => array('ng-model' => "post.slug")))
-//            ->add('category', 'choice', array('attr' => array('ng-model' => "post.category")))
+            ->add('category', 'choice', array('ng-model' => "post.category", 'ng-options-property' => 'name', 'ng-options-model' => 'categories'))
+            ->add('tags', 'choice', array('multiple' => true, 'expanded' => true, 'ng-model' => 'post.tags', 'ng-options-property' => 'name', 'ng-options-model' => 'tags'))
             ->add('submit', 'submit', array('attr' => array('ng-click' => 'update(post)')))
             ;
     }
