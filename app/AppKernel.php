@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Presta\ComposerPublicBundle\PrestaComposerPublicBundle(),
+            new Dey\Sonata\AngularAdminBundle\DeySonataAngularAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
