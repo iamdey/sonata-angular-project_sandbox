@@ -40,7 +40,9 @@
         "jms/serializer-bundle": "*",
         "frameworks/jquery": "1.10.2",
         "presta/composer-public-bundle": "~1.0@dev",
-        "angular/angular.js": "1.0.8"
+        "angular/angular.js": "1.0.8",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
