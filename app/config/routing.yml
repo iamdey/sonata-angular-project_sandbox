@@ -6,22 +6,36 @@ acme_simple_cms:
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
     
-posts:
-    type:     rest
-    resource: "@AcmeSimpleCMSBundle/Controller/PostController.php"
-    prefix:   /
+#posts:
+#    type:     rest
+#    resource: "@AcmeSimpleCMSBundle/Controller/PostController.php"
+#    prefix:   /
+#
+#users:
+#    type:     rest
+#    resource: "@AcmeSimpleCMSBundle/Controller/UserController.php"
+#    prefix:   /
+#
+#categories:
+#    type:     rest
+#    resource: "@AcmeSimpleCMSBundle/Controller/CategoryController.php"
+#    prefix:   /
+#    
+#tags:
+#    type:     rest
+#    resource: "@AcmeSimpleCMSBundle/Controller/TagController.php"
+#    prefix:   /
 
-users:
-    type:     rest
-    resource: "@AcmeSimpleCMSBundle/Controller/UserController.php"
-    prefix:   /
+#dey_sonata_angular_admin:
+#    type: 
+#    resource:
+#    prefix:
+        
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
 
-categories:
-    type:     rest
-    resource: "@AcmeSimpleCMSBundle/Controller/CategoryController.php"
-    prefix:   /
-    
-tags:
-    type:     rest
-    resource: "@AcmeSimpleCMSBundle/Controller/TagController.php"
-    prefix:   /
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin

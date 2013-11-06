@@ -103,4 +103,8 @@ class User
         return $this->lastname;
     }
     
+    public function __toString() 
+    {
+        return $this->getFirstname() . ' ' . $this->getLastname();
+    }
 }

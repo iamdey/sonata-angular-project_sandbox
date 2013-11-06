@@ -6,3 +6,13 @@ services:
         class: %sonata_angular.choice_type.class%
         tags: [{name: "form.type_extension", alias: "choice"}]
         
+services:
+    acme_simplecms.admin.post:
+        class: Acme\SimpleCMSBundle\Admin\PostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Post" }
+        arguments:
+            - ~
+            - Acme\SimpleCMSBundle\Entity\Post
+            - ~
+            
