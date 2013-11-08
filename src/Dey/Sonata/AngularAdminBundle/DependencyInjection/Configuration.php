@@ -17,13 +17,22 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
+        //TODO inject new config param in sonata
+        
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dey_sonata_angular_admin');
-
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
-
+        $rootNode = $treeBuilder->root('sonata_admin', 'array');
+//
+//        $rootNode
+//            ->children()
+//                ->arrayNode('templates')
+//                    ->addDefaultsIfNotSet()
+//                    ->children()
+//                        ->scalarNode('angular_layout')->defaultValue('DeySonataAngularAdminBundle::standard_layout.html.twig')->cannotBeEmpty()->end()
+//                    ->end()
+//                ->end()
+//            ->end()
+//        ->end();
+//
         return $treeBuilder;
     }
 }

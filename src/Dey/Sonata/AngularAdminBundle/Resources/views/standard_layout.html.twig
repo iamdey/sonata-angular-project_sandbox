@@ -1,0 +1,33 @@
+{% extends "MopaBootstrapBundle::base.html.twig" %}
+
+{% block html_tag '<html ng-app="SonataAngularApp">' %}
+
+{% block head_script %}
+    {{ parent() }}
+    {% javascripts
+        '@PrestaComposerPublicBundle/Resources/public/frameworks/jquery/jquery.js'
+        'bundles/fosjsrouting/js/router.js'
+        'bundles/prestacomposerpublic/angular/angular.js/angular.js'
+        'bundles/acmesimplecms/js/ctrl.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+{% endblock head_script %}
+
+{% block title "Sonata Angular" %}
+{% block headline "Sonata Angular" %}
+{% block footer "&copy; Dey" %}
+
+{% block navbar %}{% raw %}
+<!-- FIXME render this as sonata top navbar -->
+<ul class="nav nav-list" ng-controller="MenuCtrl">
+    <li ng-repeat="item in menu" ng-class="navClass(item.navClass)"><a href="{{ item.uri }}">{{ item.name }}</a></li>
+</ul>
+{% endraw %}{% endblock %}
+
+{% block content_content %}
+<div ng-view></div>
+{% endblock %}
+
+{% block content_sidebar "" %}

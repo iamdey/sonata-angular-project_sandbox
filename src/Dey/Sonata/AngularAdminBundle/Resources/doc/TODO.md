@@ -4,21 +4,26 @@
 
  * pouvoir utiliser sonata et sonata angular en // ?
 
+-> semble ok car ça dépend du controller utilisé
+-> ou pas, car on définit le bundle comme enfant unique (à éviter?)
+
 ## Routing
 
  * routing js
  * routes layout base
+ * menuCtrl
 
 ## actions
 
- * action default : layout base + dashboard
- * actions restfull généré par admin (crudcontroller)
- * generation routes js
+ * [x] action default : layout base + dashboard
+ * [ ] actions restfull généré par admin (crudcontroller)
+ * [ ] generation routes js
  * generation templates forms ?
 
 ## View
 
- * layout base
+ * [x] layout base
+  * [x] configuration base layout par défaut
 
 ## angular
 

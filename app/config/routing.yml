@@ -32,7 +32,7 @@ fos_js_routing:
 #    prefix:
         
 admin:
-    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    resource: '@DeySonataAngularAdminBundle/Resources/config/routing/sonata_admin.yml'
     prefix: /admin
 
 _sonata_admin:

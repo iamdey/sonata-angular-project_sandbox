@@ -1,0 +1,4 @@
+sonata_angular_dashboard:
+    pattern: /
+    defaults:
+        _controller: DeySonataAngularAdminBundle:Core:dashboard
