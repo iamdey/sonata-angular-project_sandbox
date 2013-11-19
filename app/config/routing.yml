@@ -37,5 +37,5 @@ admin:
 
 _sonata_admin:
     resource: .
-    type: sonata_admin
+    type: sonata_angular_admin
     prefix: /admin
